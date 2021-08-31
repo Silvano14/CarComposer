@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.App {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}

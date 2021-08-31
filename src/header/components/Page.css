@@ -1,0 +1,14 @@
+.name.page {
+    padding-top: 0.7em;
+    padding-right: 0.8em;
+    padding-bottom: 0.7em;
+    padding-left: 0.8em;
+    font-family: Lato, sans-serif bold;
+    cursor: pointer;
+}
+
+.name.page>p {
+    margin: 0;
+    font-size: 25px;
+    font-family: Lato;
+}

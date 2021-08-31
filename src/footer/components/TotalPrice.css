@@ -1,0 +1,9 @@
+.total-price>.price {
+    color: #24221f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.total-price>p {
+    margin: 0;
+}

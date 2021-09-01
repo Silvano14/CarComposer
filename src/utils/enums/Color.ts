@@ -30,7 +30,7 @@ export const getColorAvailable = () => {
             hexColor: "#303539"
         },
         [Color.OrangeMetallic]: {
-            description: "Orange",
+            description: "Orange Metallic",
             price: 550,
             hexColor: "#CF5A16"
         }

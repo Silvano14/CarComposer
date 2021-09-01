@@ -27,6 +27,8 @@
 
 .summary>.color.section {
     display: flex;
+    font-size: 30px;
+    align-items: center;
 }
 
 .summary>.title.section>* {

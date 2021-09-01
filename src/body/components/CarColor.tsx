@@ -28,7 +28,7 @@ const CarColor = ({ possibleColor, model, showTooltip = true }: CarColorProps) =
 
     const modelPrice = getModelsAvailable()[Model[model] as unknown as Model].price;
 
-    const { hexColor: color, price: colorPrice } = getColorAvailable()[possibleColor];
+    const { hexColor: color, price: colorPrice, description } = getColorAvailable()[possibleColor];
 
     useEffect(() => {
         if (colorSelected === possibleColor)
@@ -50,7 +50,7 @@ const CarColor = ({ possibleColor, model, showTooltip = true }: CarColorProps) =
                 style={{ ...style, backgroundColor: color }}
                 onClick={() => showTooltip ? chosenColor(dispatch, setSelected, possibleColor, modelPrice, colorPrice) : {}}
             >
-                {showTooltip ? <span className="tooltiptext">{`${Color[possibleColor]} $ ${colorPrice}`}</span> : <></>
+                {showTooltip ? <span className="tooltiptext">{`${description} $ ${colorPrice}`}</span> : <></>
                 }
             </div>
         </div>

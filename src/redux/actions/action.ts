@@ -1,19 +1,15 @@
 //action types created and exported
 export const UPDATE_PAGE = "upload page";
-export const UPDATE_PRODUCT = "update product";
 export const UPDATE_PRICE = "update price";
 export const UPDATE_MODEL = "update model";
 export const UPDATE_COLOR = "update color";
 export const REMOVE_ACCESSORY = "remove accessory";
 export const ADD_ACCESSORY = "add accessory";
 export const NEXT_PAGE = "next page";
+export const PREVIOUS_PAGE = "previous page";
 
 export const uploadPage = () => ({
     type: UPDATE_PAGE
-})
-
-export const updateProduct = () => ({
-    type: UPDATE_PRODUCT
 })
 
 export const updatePrice = () => ({
@@ -30,6 +26,10 @@ export const updateColor = () => ({
 
 export const nextPage = () => ({
     type: NEXT_PAGE
+})
+
+export const previousPage = () => ({
+    type: PREVIOUS_PAGE
 })
 
 export const addAccessory = () => ({

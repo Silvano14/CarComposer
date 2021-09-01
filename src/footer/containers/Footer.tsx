@@ -1,31 +1,33 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NEXT_PAGE } from '../../redux/actions/action';
+import { NEXT_PAGE, PREVIOUS_PAGE } from '../../redux/actions/action';
 import { DefaultState } from '../../redux/reducers/reducer';
 import { Button } from '../../utils';
-import { CarImage } from '../../utils/components/CarImage';
+import { getImageByCar } from '../../utils/car/getImageByCar';
 import { Pages } from '../../utils/enums/Pages';
 import { dispatchAction } from '../../utils/redux/dispatchAction';
 import TotalPrice from '../components/TotalPrice';
 import './Footer.css';
-import i3 from '../../asset/i3.jpg';
-import i8 from '../../asset/i8.jpg';
-import { Model } from '../../utils/enums/Model';
 
 const Footer = () => {
-    const { pageVisible, product: { model } } = useSelector((state: DefaultState) => state);
+    const { pageVisible, product: { model, color } } = useSelector((state: DefaultState) => state);
+    console.log(Pages[pageVisible] as unknown as string !== Pages[Pages.Models])
     const dispatch = useDispatch();
-
     return (
         <div className="footer">
             <div className="resume">
-                {model
-                    ? <CarImage image={(Model[model!] as unknown as Model) === Model.i3 ? i3 : i8} style={{ width: '150px' }} />
-                    : <></>
-                }<TotalPrice />
+                {getImageByCar(color, model, { width: '150px', height: '75px' })}
+                <div className="line" />
+                <TotalPrice />
             </div>
+            {Pages[pageVisible] as unknown as string !== Pages[Pages.Models]
+                ? <Button
+                    className="footer-btn previous"
+                    label="<"
+                    onClick={() => model ? dispatchAction(dispatch, PREVIOUS_PAGE) : {}} />
+                : <></>}
             <Button
-                className="footer-btn"
+                className="footer-btn next"
                 style={{ backgroundColor: model ? '#FFB500' : '' }}
                 label={`${Pages[pageVisible]} >`}
                 onClick={() => model ? dispatchAction(dispatch, NEXT_PAGE) : {}}
@@ -33,5 +35,11 @@ const Footer = () => {
         </div>
     );
 };
+
+// const labelButtonPage = (pageVisible: Page) => {
+//     if (typeof state.pageVisible === 'string') {
+//         const checkPageVisible = parseInt(pageVisible);
+//     }
+// }
 
 export default Footer;

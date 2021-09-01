@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import i3 from '../../asset/i3.jpg';
 import i8 from '../../asset/i8.jpg';
-import { UPDATE_MODEL, UPDATE_PRICE } from '../../redux/actions/action';
+import { UPDATE_COLOR, UPDATE_MODEL, UPDATE_PRICE } from '../../redux/actions/action';
 import { DefaultState } from '../../redux/reducers/reducer';
 import { CarImage } from '../../utils/components/CarImage';
 import { getModelsAvailable, Model } from '../../utils/enums/Model';
@@ -33,13 +33,14 @@ const CarModel = ({ model }: { model: Model }) => {
             onClick={() => {
                 if (isClicked) {
                     dispatchAction(dispatch, UPDATE_PRICE, 0)
+                    dispatchAction(dispatch, UPDATE_COLOR)
                     dispatchAction(dispatch, UPDATE_MODEL, '')
-                    setIfClicked(!isClicked)
                 } else {
                     dispatchAction(dispatch, UPDATE_PRICE, price)
+                    dispatchAction(dispatch, UPDATE_COLOR)
                     dispatchAction(dispatch, UPDATE_MODEL, model)
-                    setIfClicked(!isClicked)
                 }
+                setIfClicked(!isClicked)
             }}
             style={isClicked ? modelSelectedStyle : {}} >
             <h1>{`BMW ${model}`}</h1>

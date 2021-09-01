@@ -1,0 +1,42 @@
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 150px 0px 150px;
+}
+
+.summary>.description {
+    text-align: center;
+}
+
+.summary>* {
+    font-family: Lato;
+}
+
+.summary>.accessories.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary>.title.section {
+    font-weight: bold;
+    font-size: large;
+    color: #24221f;
+}
+
+.summary>.color.section {
+    display: flex;
+}
+
+.summary>.title.section>* {
+    font-weight: bold;
+    font-size: large;
+    color: #24221f;
+}
+
+.summary>.line {
+    margin-top: 20px;
+    width: 50px;
+    border-top: 3px solid #EDEDED;
+}

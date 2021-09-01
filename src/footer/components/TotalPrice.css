@@ -6,4 +6,6 @@
 
 .total-price>p {
     margin: 0;
+    color: gray;
+    font-family: Lato;
 }

@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { ADD_ACCESSORY, REMOVE_ACCESSORY } from '../../redux/actions/action';
-import { DefaultState } from '../../redux/reducers/reducer';
 import { Accessories } from '../../utils/enums/Accessories';
 import { dispatchAction } from '../../utils/redux/dispatchAction';
 import './Accessory.css';
 
-const Accessory = ({ label, price }: { label: string, price: number }) => {
-    const [isClicked, setIfClicked] = useState<boolean>(false);
-    const accessory: Accessories[] = useSelector((state: DefaultState) => state.product.accessories);
+type AccessoryProp = {
+    label: string
+    price: number
+    isSelected: boolean
+    accessory: Accessories
+}
+
+const Accessory = ({ label, price, isSelected, accessory }: AccessoryProp) => {
+    const [isClicked, setIfClicked] = useState<boolean>(isSelected);
     const dispatch = useDispatch();
 
     const selectedStyle: React.CSSProperties = {

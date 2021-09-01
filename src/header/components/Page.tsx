@@ -9,13 +9,14 @@ import './Page.css';
 
 const Page = ({ page, isVisible }: { readonly page: number, readonly isVisible: boolean }) => {
     const dispatch = useDispatch();
-    const modelIsSelected: Model | undefined = useSelector((state: DefaultState) => state.product.model);
+    const model: Model | undefined = useSelector((state: DefaultState) => state.product.model);
     const isSelected: React.CSSProperties = { borderBottom: '3px solid #FFB80B', color: '#FFB80B' };
+
     return (
         <div
             className={"name page"}
             style={isVisible ? isSelected : {}}
-            onClick={() => modelIsSelected ? dispatchAction(dispatch, UPDATE_PAGE, page) : {}}>
+            onClick={() => model ? dispatchAction(dispatch, UPDATE_PAGE, page) : {}}>
             <p>{Pages[page]}</p>
         </div>)
 }

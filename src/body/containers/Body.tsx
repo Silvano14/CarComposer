@@ -13,7 +13,7 @@ const Body = () => {
     const [page, setPage] = useState<Pages>(Pages.Models);
 
     useEffect(() => {
-        if (pageVisible)
+        if (pageVisible !== undefined)
             setPage(pageVisible);
     }, [setPage, pageVisible])
 

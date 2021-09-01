@@ -16,6 +16,11 @@
     flex: 1;
 }
 
+.accessory>.input-checkbox {
+    width: 30px;
+    height: 30px;
+}
+
 .accessory>.price {
     padding-right: 30px;
 }

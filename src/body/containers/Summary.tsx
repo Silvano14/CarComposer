@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { DefaultState } from '../../redux/reducers/reducer';
 import { Bmw } from '../../utils/car/Car';
 import { getImageByCar } from '../../utils/car/getImageByCar';
-import { Accessories, getAccessoriesAvailable } from '../../utils/enums/Accessories';
+import { getAccessoriesAvailable } from '../../utils/enums/Accessories';
 import { Color, getColorAvailable } from '../../utils/enums/Color';
 import { Model } from '../../utils/enums/Model';
 import CarColor from '../components/CarColor';

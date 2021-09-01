@@ -7,6 +7,10 @@ export enum Accessories {
 
 export const getAccessoriesAvailable = () => {
     return {
+        [Accessories.LaserLight]: {
+            description: "BMW Laserlight",
+            price: 6300
+        },
         [Accessories.ChargingStation]: {
             description: "BMW Chargin Station",
             price: 1080
@@ -17,10 +21,6 @@ export const getAccessoriesAvailable = () => {
         },
         [Accessories.maintenanceProgramUpgradeOneYear]: {
             description: "1 year BMW Maintenance Program Upgrade",
-            price: 975
-        },
-        [Accessories.LaserLight]: {
-            description: "BMW Laserlight",
             price: 975
         }
     }

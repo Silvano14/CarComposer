@@ -33,3 +33,13 @@
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.car-color {
+    width: 50px;
+    height: 51px;
+}
+
+.car-color>.car.color.tooltip {
+    width: 50px;
+    height: 49px;
+}

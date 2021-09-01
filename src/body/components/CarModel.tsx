@@ -5,6 +5,7 @@ import i8 from '../../asset/i8.jpg';
 import { UPDATE_COLOR, UPDATE_MODEL, UPDATE_PRICE } from '../../redux/actions/action';
 import { DefaultState } from '../../redux/reducers/reducer';
 import { CarImage } from '../../utils/components/CarImage';
+import Checkbox from '../../utils/components/Checkbox';
 import { getModelsAvailable, Model } from '../../utils/enums/Model';
 import { dispatchAction } from '../../utils/redux/dispatchAction';
 import './CarModel.css';
@@ -46,7 +47,7 @@ const CarModel = ({ model }: { model: Model }) => {
             <h1>{`BMW ${model}`}</h1>
             {getImageByModel(model)}
             <p>{`from $ ${price}`}</p>
-
+            <Checkbox isChecked={isClicked} style={{ borderRadius: '100%' }} />
         </div>
     );
 };

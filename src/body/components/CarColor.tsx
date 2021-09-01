@@ -9,7 +9,7 @@ import './CarColor.css';
 
 const style: React.CSSProperties = {
     width: '50px',
-    height: '50px',
+    height: '49px',
     borderRadius: '100%',
     cursor: 'pointer',
 }
@@ -42,9 +42,7 @@ const CarColor = ({ possibleColor, model, showTooltip = true }: CarColorProps) =
             className="car-color"
             style={{
                 ...style,
-                width: '50px',
-                height: '51px',
-                border: selected && showTooltip ? '2px solid #FFB500' : '2px solid #D1D1D1',
+                border: selected && showTooltip ? '2px solid #FFB500' : '2px solid #EFEFEF',
                 marginRight: '10px'
             }}>
             <div

@@ -11,9 +11,7 @@ import './Footer.css';
 
 const Footer = () => {
     const { pageVisible, product: { model, color } } = useSelector((state: DefaultState) => state);
-    console.log(Pages[pageVisible] as unknown as string !== Pages[Pages.Models])
     const dispatch = useDispatch();
-    console.log(pageVisible)
     return (
         <div className="footer">
             <div className="resume">

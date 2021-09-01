@@ -61,7 +61,7 @@ export class Bmw extends Car {
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit saepe facilis hic, unde, numquam vel. Blanditiis sed laboriosam ratione nulla atque molestias at explicabo aperiam reprehenderit culpa nihil, quis totam cupiditate dolores in quisquam magnam inventore nobis, rem adipisci eveniet illum. "
                 )
                 break;
-            default: console.log("errore")
+            default: console.error("The car request does not exist")
         }
     }
 }

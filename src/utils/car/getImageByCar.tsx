@@ -15,6 +15,10 @@ export const getImageByCar = (color: Color | undefined, model: Model | undefined
         return <></>;
     }
 
+    if (typeof model === 'string' && model === '') {
+        return <></>;
+    }
+
     const style = { width: '700px', height: '350px', ...customStyle }
 
     if (color === undefined) {

@@ -13,13 +13,11 @@ const Colors = () => {
     const [color, setColor] = useState<Color>();
 
     const getCar = useCallback(() => new Bmw(Model[model!] as unknown as Model), [model]);
-    console.log(getCar().color)
 
 
     useEffect(() => {
         if (actualColor !== undefined) {
             setColor(actualColor);
-            console.log(actualColor)
         }
     }, [actualColor])
 

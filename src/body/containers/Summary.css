@@ -7,6 +7,7 @@
 
 .summary>.description {
     text-align: center;
+    color: #7D96A0;
 }
 
 .summary>* {
@@ -17,6 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #7D96A0;
 }
 
 .summary>.title.section {

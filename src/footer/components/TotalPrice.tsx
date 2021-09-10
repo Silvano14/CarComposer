@@ -14,10 +14,12 @@ const TotalPrice = () => {
             setCurrentPrice(0);
     }, [model, price]);
 
-    return (<div className="total-price">
-        <p> Total </p>
-        <p className="price">{`$ ${currentPrice}`}</p>
-    </div>)
+    return (
+        <div className={`total-price `}>
+            <p> Total </p>
+            <p className="price">{`$ ${currentPrice}`}</p>
+        </div>
+    )
 }
 
 

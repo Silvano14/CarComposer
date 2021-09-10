@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { DefaultState } from '../../redux/reducers/reducer';
 import { Bmw } from '../../utils/car/Car';
-import { getImageByCar } from '../../utils/car/getImageByCar';
+import { getImageByCar } from '../../utils/components/getImageByCar';
 import { Color } from '../../utils/enums/Color';
 import { Model } from '../../utils/enums/Model';
 import CarColor from '../components/CarColor';

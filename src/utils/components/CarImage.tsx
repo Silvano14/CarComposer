@@ -1,2 +1,8 @@
-export const CarImage = ({ image, style }: { image: string, style: React.CSSProperties }) =>
-    <img src={image} alt="" style={style} />
+type CarImageProp = {
+    image: string,
+    style: React.CSSProperties,
+    className?: string
+}
+
+export const CarImage = ({ image, style, className = "" }: CarImageProp) =>
+    <img src={image} alt="" style={style} className={className} />

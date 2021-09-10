@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import './Button.css';
 
 type ButtonProps = {
     readonly label: string,
@@ -9,12 +10,16 @@ type ButtonProps = {
     readonly logo?: string
 }
 
-export const commonBtnStyle: React.CSSProperties = {
-}
-
 export const Button = ({ className, style, label, onClick, id }: ButtonProps) =>
     <Fragment>
-        <button className={className || ""} style={{ ...commonBtnStyle, ...style }} onClick={onClick} id={"id"}>
+        <button
+            data-back="Back" data-front="Front"
+            className={`btn ${className}`}
+            style={style}
+            onClick={onClick}
+            id={"id"}
+            //@ts-ignore
+            content={label}>
             {label}
         </button>
     </Fragment>

@@ -6,3 +6,8 @@
     align-items: center;
     padding-bottom: 200px;
 }
+
+.body>.model,
+.body>.colors,
+.body>.accessories,
+.body>.summary {}

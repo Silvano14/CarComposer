@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
 import { ADD_ACCESSORY, REMOVE_ACCESSORY } from '../../redux/actions/action';
@@ -15,7 +15,6 @@ type AccessoryProp = {
 }
 
 const Accessory = ({ label, price, isSelected, accessory }: AccessoryProp) => {
-    const inputEl = useRef(null);
     const [isClicked, setIfClicked] = useState<boolean>(isSelected);
     const dispatch = useDispatch();
 
@@ -26,7 +25,7 @@ const Accessory = ({ label, price, isSelected, accessory }: AccessoryProp) => {
     return (
         <div className="accessory"
             style={isClicked ? selectedStyle : {}}
-            onClick={selectAccessory(isClicked, dispatch, accessory, price, setIfClicked, inputEl)}>
+            onClick={selectAccessory(isClicked, dispatch, accessory, price, setIfClicked)}>
             <p className="label">{label}</p>
             <p className="price">{`$ ${price}`}</p>
             <Checkbox isChecked={isClicked} />
@@ -41,8 +40,8 @@ function selectAccessory(
     dispatch: Dispatch<any>,
     accessory: Accessories,
     price: number,
-    setIfClicked: React.Dispatch<React.SetStateAction<boolean>>,
-    input: React.MutableRefObject<null>): React.MouseEventHandler<HTMLDivElement> | undefined {
+    setIfClicked: React.Dispatch<React.SetStateAction<boolean>>
+): React.MouseEventHandler<HTMLDivElement> | undefined {
     return () => {
         !isClicked
             ? dispatchAction(dispatch, ADD_ACCESSORY, { accessory, price })

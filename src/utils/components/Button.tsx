@@ -13,13 +13,9 @@ type ButtonProps = {
 export const Button = ({ className, style, label, onClick, id }: ButtonProps) =>
     <Fragment>
         <button
-            data-back="Back" data-front="Front"
             className={`btn ${className}`}
             style={style}
-            onClick={onClick}
-            id={"id"}
-            //@ts-ignore
-            content={label}>
+            onClick={onClick}>
             {label}
         </button>
     </Fragment>

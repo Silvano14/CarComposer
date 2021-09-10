@@ -9,12 +9,7 @@ import { dispatchAction } from '../../utils/redux/dispatchAction';
 import { fadeBorder } from '../../utils/style/commonStyle';
 import './CarModel.css';
 
-const styleImage: React.CSSProperties = {
-    width: '370px',
-    height: '170px',
-}
-
-const CarModel = ({ model }: { model: Model }) => {
+const CarModel = ({ model, style }: { model: Model, style?: React.CSSProperties }) => {
     const dispatch = useDispatch();
     const [isClicked, setIfClicked] = useState<boolean>(false);
     const modelSelected = useSelector((state: DefaultState) => state.product.model);
@@ -55,7 +50,7 @@ const CarModel = ({ model }: { model: Model }) => {
         >
 
             <h1>{`BMW ${model}`}</h1>
-            {getImageByCar(undefined, model, styleImage)}
+            {getImageByCar(undefined, model, style)}
             <p>{`from $ ${price}`}</p>
             <Checkbox isChecked={isClicked} style={{ borderRadius: '100%' }} />
         </div>

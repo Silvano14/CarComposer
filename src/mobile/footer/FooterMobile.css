@@ -1,0 +1,34 @@
+.footer-mobile {
+    position: fixed;
+    bottom: 0;
+    z-index: 40;
+    width: 100%;
+    display: inline-flex;
+}
+
+.footer-mobile>.animated>.footer-btn-mobile.next {
+    width: 100%;
+    height: 50px;
+    background-color: #FFB80B;
+    border: 0;
+    text-transform: uppercase;
+    color: white;
+}
+
+.footer-mobile>.animated.slideInUp {
+    width: 100%;
+}
+
+.footer-mobile>.animated.slideInLeft {
+    width: 100%;
+}
+
+.footer-mobile>.animated>.footer-btn-mobile.previous {
+    height: 50px;
+    width: 100%;
+    border: 0;
+    text-transform: uppercase;
+    color: white;
+    background-color: grey;
+    text-transform: uppercase;
+}

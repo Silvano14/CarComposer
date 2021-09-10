@@ -1,0 +1,15 @@
+.model-mobile>.car.model {
+    width: 100%;
+    height: 340px;
+    padding-bottom: 15px;
+    margin: 20px 0px 20px 0px;
+}
+
+.model-mobile>.car.model:last-child {
+    margin-bottom: 80px;
+}
+
+.model-mobile>.car.model>img {
+    width: 250px;
+    height: 280px;
+}

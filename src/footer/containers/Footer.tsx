@@ -32,12 +32,10 @@ const Footer = () => {
                 <TotalPrice />
             </div>
 
-            {(Pages[pageVisible] as string) !== Pages[Pages.Models]
-                ? <Button
-                    className="footer-btn previous"
-                    label="<"
-                    onClick={() => model ? dispatchAction(dispatch, PREVIOUS_PAGE) : {}} />
-                : <></>}
+            <Button
+                className={`footer-btn previous ${(Pages[pageVisible] as string) === Pages[Pages.Models] ? 'disabled' : ''}`}
+                label="<"
+                onClick={() => model ? dispatchAction(dispatch, PREVIOUS_PAGE) : {}} />
 
             {showAlert ? <div className={`alert bottom ${!!showAlertModel ? 'showMe' : 'hideMe'}`}>
                 Please, select a model first!
@@ -55,7 +53,7 @@ const Footer = () => {
     );
 };
 
-const labelButtonPage = (pageVisible: Pages) => {
+export const labelButtonPage = (pageVisible: Pages) => {
     if (typeof pageVisible === 'string') {
         const result = parseInt(pageVisible) + 1;
         if (result >= getPagesValues().length)

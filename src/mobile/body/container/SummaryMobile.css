@@ -1,0 +1,45 @@
+.summary-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 60px;
+}
+
+.summary-mobile>.description {
+    text-align: left;
+    color: #7D96A0;
+}
+
+.summary-mobile>* {
+    font-family: Lato;
+}
+
+.summary-mobile>.accessories.list {
+    display: flex;
+    flex-direction: column;
+    color: #7D96A0;
+}
+
+.summary-mobile>.title.section {
+    font-weight: bold;
+    font-size: large;
+    color: #24221f;
+}
+
+.summary-mobile>.color.section {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+
+.summary-mobile>.title.section>* {
+    font-weight: bold;
+    font-size: large;
+    color: #24221f;
+}
+
+.summary-mobile>.line {
+    margin-top: 10px;
+    width: 50px;
+    border-top: 3px solid #EDEDED;
+}

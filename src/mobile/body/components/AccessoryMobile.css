@@ -1,0 +1,30 @@
+.accessory-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    border: 2px solid #EDEDED;
+    font-family: Lato;
+    font-weight: bold;
+    height: 100px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.accessory-mobile>.label {
+    flex: 1;
+}
+
+.accessory-mobile>.input-checkbox {
+    width: 30px;
+    height: 30px;
+}
+
+.accessory-mobile>.price {
+    padding-right: 30px;
+}
+
+.accessory-mobile>p {
+    font-size: 15px;
+}

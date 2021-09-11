@@ -40,8 +40,9 @@ const Footer = () => {
                 <Animated animationIn="slideInLeft" animationOut="slideOutLeft" animationInDuration={400} animationOutDuration={400} isVisible={showImage}>
                     {getImageByCar(color, oldModel, { width: '150px', height: '75px' })}
                 </Animated>
-                <div className={`line`} />
-                <TotalPrice />
+                <div className={`${showImage ? 'left' : 'right'}`}>
+                    <TotalPrice />
+                </div>
             </div>
 
             <Animated animationIn="fadeIn" animationOut="fadeOut" animationInDuration={400} animationOutDuration={400} isVisible={showPreviousButton}>
@@ -57,7 +58,7 @@ const Footer = () => {
                 : <></>
             }
             <Button
-                className="footer-btn next btn-flip"
+                className={`footer-btn next`}
                 style={{ backgroundColor: model ? '#FFB500' : '' }}
                 label={`${labelButtonPage(pageVisible)} >`}
                 onClick={() => model ? dispatchAction(dispatch, NEXT_PAGE) : {}}

@@ -4,6 +4,7 @@
     padding-bottom: 0.7em;
     padding-left: 0.8em;
     cursor: pointer;
+    transition: opacity 0.5s, border 0.2s ease-in-out;
 }
 
 .name.page>p {
@@ -11,6 +12,7 @@
     font-family: Lato;
     font-size: 15px;
     text-transform: uppercase;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .name.page.enable>p:hover {

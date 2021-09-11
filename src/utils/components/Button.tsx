@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactElement } from 'react';
 import './Button.css';
 
 type ButtonProps = {
-    readonly label: string,
+    readonly label: string | ReactElement,
     readonly style?: React.CSSProperties,
     readonly className?: string,
     onClick?(): void
@@ -15,7 +15,8 @@ export const Button = ({ className, style, label, onClick, id }: ButtonProps) =>
         <button
             className={`btn ${className}`}
             style={style}
-            onClick={onClick}>
+            onClick={onClick}
+        >
             {label}
         </button>
     </Fragment>

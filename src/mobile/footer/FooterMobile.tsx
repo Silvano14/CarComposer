@@ -22,12 +22,13 @@ const Footer = () => {
                 animationOutDuration={400}
                 isVisible={pageVisible > Pages.Models}
             >
-                <Button
+                {(pageVisible as number) >= 1 ? <Button
                     className={`footer-btn-mobile previous`}
                     label={`< ${labelButtonPage(pageVisible - 2) || ''}`}
                     onClick={() => model ? dispatchAction(dispatch, PREVIOUS_PAGE) : {}}
-                />
+                /> : <></>}
             </Animated>
+
             <Animated animationIn="slideInUp" animationOut="slideOutDown" animationInDuration={400} animationOutDuration={400} isVisible={!!model} style={{ width: '100%' }}>
                 <Button
                     className={`footer-btn-mobile next`}

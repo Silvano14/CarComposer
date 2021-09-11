@@ -28,6 +28,19 @@
     text-align-last: justify;
 }
 
+.footer>.footer-btn.next>.flip {
+    transition: transform 0.5s, opacity 0.5s ease;
+    transform: translateY(-30px);
+    color: black;
+    opacity: 0;
+}
+
+.footer>.footer-btn.next>.back-flip {
+    transition: transform 1s, ease forwards;
+    transform: translateY(0px);
+    color: black;
+}
+
 .footer>.animated>.footer-btn.previous {
     border-radius: 50%;
     height: 60px;
@@ -49,12 +62,6 @@
 
 .footer>* {
     font-family: Lato;
-}
-
-.footer>.resume>.line {
-    margin: 10px;
-    height: 75px;
-    border-right: 2px solid #EDEDED;
 }
 
 @keyframes slideUp {
@@ -115,14 +122,18 @@
     }
 }
 
-.footer>.resume>.line.moveToRight {
-    animation: slideRight 1s ease forwards;
+.footer>.resume>.right {
+    animation: slideRight 0.4s ease forwards;
 }
 
-.footer>.resume>.line.moveToLeft {
-    animation: slideLeft 1s ease forwards;
+.footer>.resume>.left {
+    animation: slideLeft 0.4s ease forwards;
 }
 
 .footer>.resume>button {
     animation: slideUp 1s ease forwards;
+}
+
+.footer>.resume>div {
+    position: absolute;
 }

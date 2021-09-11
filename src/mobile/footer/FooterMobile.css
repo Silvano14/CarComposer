@@ -32,3 +32,11 @@
     background-color: grey;
     text-transform: uppercase;
 }
+
+.footer-mobile>.animated>.footer-btn-mobile.previous.full {
+    animation: slideLeft 1s ease forwards;
+}
+
+.footer-mobile>.animated>.footer-btn-mobile.previous.half {
+    animation: slideRight 1s ease forwards;
+}

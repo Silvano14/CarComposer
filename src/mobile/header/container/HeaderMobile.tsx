@@ -14,6 +14,9 @@ export const HeaderMobile = () => {
                 <h1> Select Model </h1>
                 <p className="number-page"> {`Step  ${page + 1} of ${getPagesValues().length}`}</p>
             </div>
-            <Button className="btn-homepage" label="< Article & Download" />
+            {page === Pages.Models
+                ? <Button className="btn-homepage" label="< Article & Download" />
+                : <></>
+            }
         </div>)
 }

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { DefaultState } from '../../redux/reducers/reducer';
 import './TotalPrice.css';
 
-const TotalPrice = () => {
+const TotalPrice = ({ className }: { className?: string }) => {
     const { price, model } = useSelector((state: DefaultState) => state.product);
     const [currentPrice, setCurrentPrice] = useState<number>(0);
 
@@ -15,7 +15,7 @@ const TotalPrice = () => {
     }, [model, price]);
 
     return (
-        <div className={`total-price `}>
+        <div className={`total-price ${className}`}>
             <p> Total </p>
             <p className="price">{`$ ${currentPrice}`}</p>
         </div>

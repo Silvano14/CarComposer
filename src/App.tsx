@@ -11,6 +11,11 @@ const App = () => {
   const [isBrowserView, setIfBrowser] = useState<boolean>(true);
 
   useEffect(() => {
+    if (window.screen.width > 770)
+      setIfBrowser(true)
+    else
+      setIfBrowser(false)
+
     window.addEventListener('resize', (size: any) => setIfBrowser(size.target.innerWidth > 770));
   }, [])
 

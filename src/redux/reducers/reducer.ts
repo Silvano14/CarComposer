@@ -10,6 +10,7 @@ export type DefaultState = {
     product: {
         price: number,
         model?: Model,
+        oldModel?: Model,
         accessories: Array<{ accessory: Accessories, isSelected: boolean }>,
         color: Color,
         summary?: "",
@@ -33,7 +34,11 @@ export const reducer = (state = initialState, action: any): any => {
         }
 
         case UPDATE_MODEL: {
-            return { ...state, product: { ...state.product, model: action.payload } }
+            const model = action.payload;
+            if (model)
+                return { ...state, product: { ...state.product, model, oldModel: model } }
+            else
+                return { ...state, product: { ...state.product, model } }
         }
 
         case UPDATE_PAGE: {

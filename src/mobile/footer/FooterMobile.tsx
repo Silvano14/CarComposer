@@ -5,6 +5,7 @@ import { labelButtonPage } from '../../footer/containers/Footer';
 import { NEXT_PAGE, PREVIOUS_PAGE } from '../../redux/actions/action';
 import { DefaultState } from '../../redux/reducers/reducer';
 import { Button } from '../../utils';
+import { Pages } from '../../utils/enums/Pages';
 import { dispatchAction } from '../../utils/redux/dispatchAction';
 import './FooterMobile.css';
 
@@ -19,11 +20,10 @@ const Footer = () => {
                 animationOut="slideOutLeft"
                 animationInDuration={400}
                 animationOutDuration={400}
-                isVisible={parseInt(pageVisible as unknown as string) > 0}
-            // style={{ display: parseInt(pageVisible as unknown as string) === 0 ? 'none' : '' }}
+                isVisible={pageVisible > Pages.Models}
             >
                 <Button
-                    className={`footer-btn-mobile previous `}
+                    className={`footer-btn-mobile previous`}
                     label={`< ${labelButtonPage(pageVisible - 2) || ''}`}
                     onClick={() => model ? dispatchAction(dispatch, PREVIOUS_PAGE) : {}}
                 />

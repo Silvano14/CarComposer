@@ -1,15 +1,15 @@
 .accessory-mobile {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 20px 0px 20px;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
     border: 2px solid #EDEDED;
     font-family: Lato;
     font-weight: bold;
-    height: 100px;
+    height: 120px;
     align-items: center;
     cursor: pointer;
     margin-bottom: 30px;
+    border-radius: 5px;
 }
 
 .accessory-mobile>.label {
@@ -22,7 +22,8 @@
 }
 
 .accessory-mobile>.price {
-    padding-right: 30px;
+    padding-right: 15px;
+    color: #7D96A0;
 }
 
 .accessory-mobile>p {

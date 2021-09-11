@@ -35,6 +35,6 @@ export const getImageByCar = (color: Color | undefined, model: Model | undefined
             return <CarImage className={className} style={customStyle || {}} image={i3} />
         case Color[Color.WhitePerlMetallic]:
             return <CarImage className={className} style={customStyle || {}} image={i8White} />
-        default: return <></>;
+        default: return <CarImage style={customStyle || {}} image={i3} />;
     }
 }

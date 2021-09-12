@@ -21,7 +21,5 @@ See also the list of contributors who participated in this project.
 
 ## Todo list:
 
-- Animations
-- Message Error 
-- Mobile Interface 
+- Animations (pages's transition, buttons, buttons for mobile version)
 - Docker
